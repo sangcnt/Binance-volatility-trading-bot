@@ -1,0 +1,15 @@
+--- bdcc.io 18.235.254.247	
+
+ssh ubuntu@18.235.254.247
+cd /home/ubuntu/python_codes/bdmooning
+
+- Setup Guide
+pip install -r requirements.txt
+[Optional] pip3 install -U python-binance colorama PyYAML tradingview-ta
+cp creds.example.yml creds.yml
+
+python3 Binance\ Detect\ Moonings.py
+[OR] nohup python3 -u Binance\ Detect\ Moonings.py >> log.txt 2>&1 &
+
+- Management commands:
+    List processes: ps aux | grep python
