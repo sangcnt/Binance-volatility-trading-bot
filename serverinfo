@@ -13,3 +13,4 @@ python3 Binance\ Detect\ Moonings.py
 
 - Management commands:
     List processes: ps aux | grep python
+    Kill process: kill 9339
