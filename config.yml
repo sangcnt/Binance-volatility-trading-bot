@@ -4,7 +4,7 @@ script_options:
   # Setting this to False will use REAL funds, use at your own risk
   TEST_MODE: False
   LOG_TRADES: True
-  LOG_FILE: 'trades-test-2.txt'
+  LOG_FILE: 'trades-test-3.txt'
 
   # Set this to true if you are accessing binance from within the United States of America
   # Need to change TLD
@@ -36,20 +36,20 @@ trading_options:
   MAX_COINS: 4
 
   # the amount of time in MINUTES to calculate the difference from the current price (minimum: 1).
-  TIME_DIFFERENCE: 2
+  TIME_DIFFERENCE: 3
 
   # Number of times to check for TP/SL during each TIME_DIFFERENCE (minimum: 1).
   # Don't spam the Binance API, you will be banned (max 1200 requests per minute per IP).
   RECHECK_INTERVAL: 120
 
   # the difference in % between the first and second checks for the price.
-  CHANGE_IN_PRICE: 1
+  CHANGE_IN_PRICE: 2
 
   # define in % when to sell a coin that's not making a profit.
-  STOP_LOSS: 1.5
+  STOP_LOSS: 2
 
   # define in % when to take profit on a profitable coin.
-  TAKE_PROFIT: 3.5
+  TAKE_PROFIT: 4
 
   # Use custom tickers.txt list for filtering pairs.
   CUSTOM_LIST: True
@@ -62,8 +62,8 @@ trading_options:
 
   # when hit TAKE_PROFIT, move STOP_LOSS to TRAILING_STOP_LOSS percentage points below TAKE_PROFIT hence locking in profit
   # when hit TAKE_PROFIT, move TAKE_PROFIT up by TRAILING_TAKE_PROFIT percentage points
-  TRAILING_STOP_LOSS: 6
-  TRAILING_TAKE_PROFIT: 3
+  TRAILING_STOP_LOSS: 4
+  TRAILING_TAKE_PROFIT: 2
   
   # Trading fee in % per trade.
   # If using 0.75% (using BNB for fees) you must have BNB in your account to cover trading fees.
