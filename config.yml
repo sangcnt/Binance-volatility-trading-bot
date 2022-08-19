@@ -15,7 +15,7 @@ script_options:
 trading_options:
  
   # select your base currency to use for trading (trade for example USDT pairs)
-  PAIR_WITH: USDT
+  PAIR_WITH: BUSD
 
   # Total amount per trade (your base currency balance must be at least MAX_COINS * QUANTITY)
   # Binance uses a minimum of 10 USDT per trade, add a bit extra to enable selling if the price drops.
@@ -33,14 +33,14 @@ trading_options:
     - UP
 
   # Maximum number of trade 'slots' at any time (your USDT balance must be at least MAX_COINS * QUANTITY)
-  MAX_COINS: 4
+  MAX_COINS: 2
 
   # the amount of time in MINUTES to calculate the difference from the current price (minimum: 1).
-  TIME_DIFFERENCE: 3
+  TIME_DIFFERENCE: 6
 
   # Number of times to check for TP/SL during each TIME_DIFFERENCE (minimum: 1).
   # Don't spam the Binance API, you will be banned (max 1200 requests per minute per IP).
-  RECHECK_INTERVAL: 120
+  RECHECK_INTERVAL: 6
 
   # the difference in % between the first and second checks for the price.
   CHANGE_IN_PRICE: 2
