@@ -15,7 +15,7 @@
                     <textarea id="log-board" rows="10" class="form-control" id="validationTextarea" readonly></textarea>
                 </div>
                 <div class="mb-3">
-                    <textarea id="log-trades" rows="5" class="form-control" id="validationTextarea" readonly></textarea>
+                    <textarea id="log-trades" rows="10" class="form-control" id="validationTextarea" readonly></textarea>
                 </div>
             </form>
         </div>
@@ -40,16 +40,14 @@
                         if (data.board_lines.length > 0) {
                             boardLine = data.board_line_count + 1;
                             $.each(data.board_lines, function(index, line) {
-                                logBoard.val(logBoard.val() + line);
-                                logBoard.scrollTop(logBoard[0].scrollHeight - logBoard.height());
+                                logBoard.val(line + logBoard.val());
                             });
                         }
 
                         if (data.trades_lines.length > 0) {
                             tradesLine = data.trades_line_count + 1;
                             $.each(data.trades_lines, function(index, line) {
-                                logTrades.val(logTrades.val() + line);
-                                logTrades.scrollTop(logTrades[0].scrollHeight - logTrades.height());
+                                logTrades.val(line + logTrades.val());
                             });
                         }
 

@@ -1,5 +1,7 @@
 creds.yml
 trades.txt
+bn-log.txt
+signals/paused.exc
 
 __*__
 
