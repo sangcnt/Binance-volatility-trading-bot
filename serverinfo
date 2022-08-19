@@ -9,7 +9,7 @@ pip install -r requirements.txt
 cp creds.example.yml creds.yml
 
 python3 Binance\ Detect\ Moonings.py
-[OR] nohup python3 -u Binance\ Detect\ Moonings.py >> log.txt 2>&1 &
+[OR] nohup python3 -u Binance\ Detect\ Moonings.py >> bn-log.txt 2>&1 &
 
 - Management commands:
     List processes: ps aux | grep python
