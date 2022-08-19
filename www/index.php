@@ -20,10 +20,10 @@
             </ul>
             <div id="pills-tabContent" class="tab-content flex-fill py-2">
                 <div class="tab-pane fade h-100 show active" id="pills-trades" role="tabpanel" aria-labelledby="pills-trades-tab">
-                    <div id="log-trades" class="small h-100 border border-secondary p-2 rounded" id="validationTextarea" readonly></div>
+                    <div id="log-trades" class="overflow-auto small h-75 border border-secondary p-2 rounded" id="validationTextarea" readonly></div>
                 </div>
                 <div class="tab-pane fade h-100" id="pills-board" role="tabpanel" aria-labelledby="pills-board-tab">
-                    <div id="log-board" class="small h-100 border border-secondary p-2 rounded" id="validationTextarea" readonly></div>
+                    <div id="log-board" class="overflow-auto small h-75 border border-secondary p-2 rounded" id="validationTextarea" readonly></div>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                         if (data.trades_lines.length > 0) {
                             tradesLine = data.trades_line_count + 1;
                             $.each(data.trades_lines, function(index, line) {
-                                logTrades.val(line + logTrades.val());
+                                logTrades.html(line + "<br>" + logTrades.html());
                             });
                         }
 
